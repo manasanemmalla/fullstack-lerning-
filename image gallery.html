@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .caption {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 1em;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .gallery-container {
+                padding: 10px;
+            }
+            .gallery img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Image Gallery</h1>
+        <div class="gallery">
+            <div>
+                <img src="IMG-20250730-WA0150.jpg" alt="NTR">
+                <div class="caption">young Tiger</div>
+            </div>
+            <div>
+                <img src="IMG-20250730-WA0151.jpg" alt="RAM charan">
+                <div class="caption">Mega Power Sta</div>
+            </div>
+            <div>
+                <img src="sethupathi.jpg" alt="setupathi">
+                <div class="caption">Thalaivaa</div>
+            </div>
+            <div>
+                <img src="surya.jpg" alt="surya">
+                <div class="caption">Hero of Acting</div>
+            </div>
+            <div>
+                <img src="rajinipic.webp" alt="rajini">
+                <div class="caption">Thalaivaa</div>
+            </div>
+            <div>
+                <img src="prabas.avif" alt="prabas">
+                <div class="caption">Rebal Star</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
