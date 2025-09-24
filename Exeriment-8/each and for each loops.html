@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object Iteration</title>
+</head>
+<body>
+  <h2>Printing Object Data using Loops</h2>
+  <script>
+    // Step 1: Create an object
+    let student = {
+      name: "Manasa",
+      age: 21,
+      course: "B.Tech",
+      city: "Hyderabad"
+    };
+
+    // --- Using for-in loop ---
+    document.write("<b>Using for-in loop:</b><br>");
+    for (let key in student) {
+      document.write(key + " : " + student[key] + "<br>");
+    }
+
+    document.write("<br>");
+
+    // --- Using forEach loop ---
+    document.write("<b>Using forEach loop (with Object.keys):</b><br>");
+    Object.keys(student).forEach(function(key) {
+      document.write(key + " : " + student[key] + "<br>");
+    });
+
+    document.write("<br>");
+
+    // --- Using for-of loop ---
+    document.write("<b>Using for-of loop (with Object.entries):</b><br>");
+    for (let [key, value] of Object.entries(student)) {
+      document.write(key + " : " + value + "<br>");
+    }
+  </script>
+</body>
+</html>
